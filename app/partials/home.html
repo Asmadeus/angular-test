@@ -1,0 +1,18 @@
+<div class="container" ng-controller="HomeCtrl">
+	<div class="category" ng-repeat="(categoryKey, categoryValue) in allCategories">
+		<div class="category-title">{{categoryValue.name}}</div>
+		<div class="category-more">
+			See more
+		</div>
+		<div class="row">
+			<div class="col" ng-repeat="item in categoryValue.featuredSite">
+				<div class="card">
+					<a ng-href="{{item.url}}">
+						<h3>{{item.name}}</h3>
+						<img ng-src="{{'https://s3.amazonaws.com/madewithangular.com' + item.thumb + '.jpg'}}" alt="">
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
