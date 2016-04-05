@@ -1,9 +1,16 @@
-body {
+* {
 	padding: 0;
 	margin: 0;
 }
+a {
+	color: inherit;
+}
+.clearfix {
+	clear: both;
+}
 .page {
-	background-color: #F7F7F7;
+	background-color: #FAFAFA;
+  color: #444;
 }
 .page-header {
 	padding: 15px 0;
@@ -14,4 +21,46 @@ body {
 .container {
 	width: 1000px;
 	margin: 0 auto;
+}
+.category {
+	margin-bottom: 30px;
+}
+.category-title {
+	font-size: 20px;
+	float: left;
+}
+.category-heading {
+	margin-bottom: 10px;
+}
+.category-more {
+	float: right;
+	font-size: 15px;
+}
+.category .row {
+	display: flex;
+	justify-content: flex-start;
+	flex-flow: row wrap;
+}
+.card {
+	margin: 5px;
+	background-color: white;
+	box-shadow: 0 0 3px -1px black;
+}
+.col {
+	flex: 0 1 25%;
+}
+.card h3 {
+	padding: 10px;
+	font-size: 16px;
+}
+.card a {
+	text-decoration: none;
+}
+.card img {
+	max-width: 100%;
+}
+@media (max-width: 1100px) {
+	.container {
+		width: 100%;
+	}
 }

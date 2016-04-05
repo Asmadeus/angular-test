@@ -5,6 +5,10 @@ angular.module('angularTestApp',['ngRoute'])
 			controller: 'HomeCtrl',
 			templateUrl: 'partials/home.html'
 		})
+		.when('/categories/:category', {
+			controller: 'CategoryCtrl',
+			templateUrl: 'partials/category.html'
+		})
 		.otherwise({
 			redirectTo: '/'
 		});

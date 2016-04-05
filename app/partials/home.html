@@ -1,8 +1,17 @@
 <div class="container" ng-controller="HomeCtrl">
 	<div class="category" ng-repeat="(categoryKey, categoryValue) in allCategories">
-		<div class="category-title">{{categoryValue.name}}</div>
-		<div class="category-more">
-			See more
+		<div class="category-heading">
+			<div class="category-title">
+				<a href="#/categories/{{categoryKey}}">
+					{{categoryValue.name}}
+				</a>
+			</div>
+			<div class="category-more">
+				<a href="#/categories/{{categoryKey}}">
+					 See more
+				</a>
+			</div>
+			<div class="clearfix"></div>
 		</div>
 		<div class="row">
 			<div class="col" ng-repeat="item in categoryValue.featuredSite">
